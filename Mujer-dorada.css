@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat&display=swap');
+
+
+
+:root {
+    --red:#ff33838;
+}
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: var(--red);
+    color: #B19753;
+}
+
+html {
+    font-size:62.5%;
+    overflow-x: hiiden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.btn {
+    display: inline-block;
+    padding: .8rem 3rem;
+    border: .2rem solid #fff;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow:hidden;
+    z-index: 0;
+    margin-top: 1rem;
+    background-color: #fff;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:0%;
+    height: 100%;
+    background-color:#B19753;
+    transition:.3s linear;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    width: 100%;
+    left:0;
+}
+
+.btn:hover{
+    color:#000;
+    border:.2rem solid #B19753;
+}
+
+header {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo img {
+    width: 50%;
+}
+
+header .navbar a {
+font-size: 2rem;
+margin-left: 2rem;
+color: #666;
+}
+
+header .navbar a:hover{
+    color:#B19753;
+}
+
+#menu-bar {
+    font-size: 3rem;
+    cursor: pointer;
+    color: rgba(133, 122, 122, 0.829);
+    border: .2rem solid rgba(133, 122, 122, 0.829);
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+}
+
+
+/* Home Section */
+
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    background: url(./Img/Home.jpg) no-repeat;
+    background-size: cover;
+   
+}
+
+.home .content {
+    text-align: center;
+    flex: 1 1 40rem;
+}
+
+.home .content .first-text {
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.home .content .second-text {
+    font-size:90px;
+    font-weight: 300;
+    color: #fff;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    
+}
+
+.home .content .second-text span {
+    color:#B19753;   
+}
+
+
+.home .content p {
+    font-size: 2.7rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* About-us */
+
+ .about-us {
+    background: url(/Img/About-section.svg) no-repeat;
+    background-size: cover;
+}
+
+section .about-content h2 {
+    font-size:1.7rem;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+section .about-content h1 {
+    font-size: 50px;
+    font-weight: normal;
+}
+
+section .about-content h1 span{
+    color: #B19753;
+}
+
+section .about-content p {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+section .about-content a {
+    margin-bottom: 30px;
+}
+
+section .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 50px;
+}
+
+section .cards .card {
+    flex: 1 1 30rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    border-radius: 6px;
+    
+    
+}
+
+section .cards .card img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+
+section .cards .card img:hover {
+    background-color: rgba(0,0,0,0.1);
+    filter:brightness(0.8);
+}
+
+section .cards .card .content {
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+
+section .cards .card .content p {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 7px;
+    letter-spacing: 2px;
+    color: #5D4251;
+}
+
+section .cards .card .content .link {
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: 600;
+}
+
+section .cards .card .content .link:hover {
+    border-bottom: 1px solid #666;
+    /* transition: all .8s ease-out; */
+}
+
+section .cards .card .content a i {
+    margin-top: 5px;
+    font-size: 2.8rem;
+    color:#B19753;
+    cursor: pointer;
+}
+
+
+/* Mentoring */
+
+.mentoring {
+    background: url(/Img/Girl-section.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+    /* background-attachment: fixed; */
+    height:800px;
+    width:100%;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0,0,0,0.1);
+    filter:brightness(0.8);
+}
+
+
+.mentoring .information {
+    text-align: left;
+    color: #fff;
+    margin-bottom: 90px;
+}
+
+.mentoring .information h2 {
+margin-top: 50px;
+}
+
+.mentoring .information h1 {
+    font-size: 4rem;
+    font-weight: normal;
+    margin-top: 40px;
+}
+
+
+/* Info Cards */
+
+.info-cards .box-container {
+display: flex;
+flex-wrap: wrap;
+gap: 1.5rem;
+margin-top: 150px;
+margin-bottom: 150px;
+
+}
+
+.info-cards .box-container .box {
+    padding: 2rem;
+    background:#e4e0e033;
+    flex: 1 1 30rem;
+    border: .1rem solid #cecaca1e;
+    border-radius: 6px;
+    height: 100%;
+}
+
+
+
+.info-cards .box-container .box h1 {
+    /* color: #5D4251; */
+    font-size: 2.5rem;
+    
+    
+    
+}
+
+.info-cards .box-container .box p {
+    margin-top: 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.info-cards .box-container .box a {
+    display: flex;
+    justify-content: center;
+}
+
+.info-cards .box-container .box .time {
+    margin-top: 30px;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    
+}
+
+.info-cards .box-container .box .time h2 {
+    margin-top:15px;
+    
+}
+
+
+/* Your-life */
+
+.your-life{
+    background: url(/Img/6.png) no-repeat;
+    background-size:cover;
+    background-position:center;
+    /* background-attachment: fixed; */
+    height:800px;
+    width:100%;
+    transition: 0.3s ease;
+    background-color: rgba(0,0,0,0.1);
+    filter:brightness(0.8);
+}
+
+.your-life .your-life-content {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 90px;
+    
+}
+
+.your-life .your-life-content h2{
+    margin-top: 200px;
+    text-transform: uppercase;
+}
+
+
+.your-life .your-life-content h1 {
+    font-size: 5rem;
+    font-weight: normal;
+    margin-top: 80px;
+    color: #fff;
+}
+
+.your-life .your-life-content a {
+    margin-top: 30px;
+}
+
+.your-life .your-life-content h2 span {
+    color:#B19753;
+}
+
+
+/* Footer */
+
+.footer{
+    background-color:#9e9b9b8a;
+    display: flex;
+    height: 500px;
+
+}
+
+.footer .footer-content{
+display: flex;
+justify-content: space-between;
+}
+
+.footer .footer-content .box-footer img {
+    width: 40%;
+    padding: 1rem 9%;
+    margin-left: 65px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+
+.footer .footer-content .box-footer h1 {
+    
+    margin-left: 65px;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query */
+
+@media screen and (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+}
+section {
+    padding: 2rem;
+}
+@media screen and (max-width:850px){
+    .mentoring .information{
+        margin: auto;
+    }
+    .mentoring .information h2 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:768px){
+    #menu-bar{
+        display: initial;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left:0;
+        right: 0;
+        background-color: #f7f7f7;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path:polygon(0 0,100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active {
+ clip-path: polygon(0 0, 100% 0, 100% 100%,0% 100%);
+    }
+    header .navbar a {
+        margin:1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0,0,0,.1);
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+
+    }
+    header .logo img {
+        width: 40%;
+    }
+    .home .content .second-text{
+        font-size: 60px;
+       }
+       .about-us {
+        background: none;
+        
+    }
+    .mentoring .information h1 {
+       
+        font-size: 3rem;
+        font-weight: normal;
+        margin-top: 40px;
+    }
+    .mentoring {
+        height: 700px;
+    }
+    .mentoring .information h2 {
+        margin-top: 150px;
+    }
+    .your-life .your-life-content h1 {
+        font-size: 4rem;
+    }
+}
+}
+@media screen and (max-width:600px){
+    .mentoring .information{
+        margin: auto;
+    }
+    .mentoring .information h2 {
+        text-align: center;
+    }
+}
+
+
+
+@media screen and (max-width:400px) {
+    html {
+        font-size: 50%;
+    }
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
